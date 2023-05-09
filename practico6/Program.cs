@@ -35,11 +35,11 @@ if (control)
         {
             resto = x % 10;
             x = x / 10;  
-            invertido = invertido + (resto * (Math.Pow(10, i)));
+            invertido = invertido + (resto * (Math.Pow(10, i-1)));
             i--;
         }
-        
-        invertido = invertido / 10;
+
+        //invertido = invertido / 10;
         Console.WriteLine(invertido);
     } else
     {
