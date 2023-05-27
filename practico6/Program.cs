@@ -13,21 +13,39 @@ int opcion;
 
 int.TryParse(Console.ReadLine(), out opcion);
 
-Console.Write(opcion);
+//Console.Write(opcion);
 
 int num1;
 int num2;
+int resultado = 0;
 
 Console.WriteLine("ingrese un numero: ");
 int.TryParse(Console.ReadLine(), out num1);
 
 Console.WriteLine("Ingrese otro numero: ");
 int.TryParse(Console.ReadLine(), out num2);
-/*
+
 switch (opcion)
 {
     case 1:
-
-    default:
+        resultado = num1 + num2;
+    break;
+    case 2:
+        resultado = num1 - num2;
+    break;
+    case 3:
+        resultado = num1 * num2;
+    break;
+    case 4:
+        if (num2 != 0)
+        {
+            resultado = num1 / num2;
+        } else
+        {
+            Console.WriteLine("Error");
+        }
+    break;
 }
-*/
+
+Console.WriteLine("El resultado es: ");
+Console.Write(resultado);
