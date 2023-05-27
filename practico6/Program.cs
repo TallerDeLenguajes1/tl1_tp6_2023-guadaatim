@@ -4,9 +4,9 @@
 
 Console.WriteLine("Calculadora");
 Console.WriteLine("1 - Suma");
-Console.WriteLine("1 - Resta");
-Console.WriteLine("1 - Multiplicacion");
-Console.WriteLine("1 - Division");
+Console.WriteLine("2 - Resta");
+Console.WriteLine("3 - Multiplicacion");
+Console.WriteLine("4 - Division");
 Console.WriteLine("Ingrese la operacion que desea realizar: ");
 
 int opcion; 
@@ -34,6 +34,11 @@ switch (opcion)
         resultado = num1 - num2;
     break;
     case 3:
+        //resultado = num1 * num2;
+        for (int i = 0; i < num1; i++)
+        {
+            resultado = resultado + num2;
+        }
         resultado = num1 * num2;
     break;
     case 4:
