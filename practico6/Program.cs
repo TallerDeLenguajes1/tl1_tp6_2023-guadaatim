@@ -50,3 +50,11 @@ if (control)
 {
     Console.WriteLine("no es numero");
 }
+
+//Calculadora V1
+
+
+
+
+
+
