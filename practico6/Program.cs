@@ -57,6 +57,8 @@ while (aux != 0)
         break;
         default:
             int a;
+            double numradian;
+            
             Console.WriteLine("Elija uno de los numeros ingresados: ");
             Console.WriteLine("1 - " + num1);
             Console.WriteLine("2 - " + num2);
@@ -64,22 +66,30 @@ while (aux != 0)
             if (a == 1)
             {
                 Console.WriteLine("Valor Absoluto: " + Math.Abs(num1));
-                //Console.WriteLine(Math.Abs(num1));
-                Console.WriteLine("Cuadrado: ");
-                Console.WriteLine(Math.Pow(num1, 2));
-                Console.WriteLine("Raiz cuadrada: ");
-                Console.WriteLine(Math.Sqrt(num1));
-                Console.WriteLine("Seno: ");
-                Console.WriteLine(Math.Asin(num1));
-                Console.WriteLine("Coseno: ");
-                Console.WriteLine(Math.Acos(num1));
+                Console.WriteLine("Cuadrado: " + Math.Pow(num1, 2));
+                Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(num1));
+                numradian = num1 * Math.PI / 180;
+                Console.WriteLine("Seno: " + Math.Asin(numradian));
+                Console.WriteLine("Coseno: " + Math.Acos(numradian));
+                Console.WriteLine("Parte entera de float: ");
+            } else
+            {
+                Console.WriteLine("Valor Absoluto: " + Math.Abs(num2));
+                Console.WriteLine("Cuadrado: " + Math.Pow(num2, 2));
+                Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(num2));
+                numradian = num2 * Math.PI / 180;
+                Console.WriteLine("Seno: " + Math.Asin(numradian));
+                Console.WriteLine("Coseno: " + Math.Acos(numradian));
                 Console.WriteLine("Parte entera de float: ");
             }
             break;
     }
 
-    Console.WriteLine("El resultado es: ");
-    Console.Write(resultado);
+    if (opcion != 5)
+    {
+        Console.WriteLine("El resultado es: ");
+        Console.Write(resultado);
+    }
 
     Console.WriteLine("Ingrese 0 para temrinar o 1 para realizar otro calculo: ");
     int.TryParse(Console.ReadLine(), out aux);
