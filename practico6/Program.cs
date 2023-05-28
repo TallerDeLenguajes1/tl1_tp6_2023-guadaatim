@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-//Calculadora V1
+//Calculadora V2
 
 int aux = 1;
 
@@ -97,6 +97,15 @@ while (aux != 0)
     if (opcion != 5)
     {
         Console.WriteLine("El resultado es: " + resultado);
+    }
+
+    if (num1 > num2)
+    {
+        Console.WriteLine("El maximo numero es: " + num1);
+        Console.WriteLine("El minimo numero es: " + num2);
+    } else
+    {
+        
     }
 
     Console.WriteLine("Ingrese 0 para temrinar o 1 para realizar otro calculo: ");
