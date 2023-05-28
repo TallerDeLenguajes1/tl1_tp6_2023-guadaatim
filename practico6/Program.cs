@@ -105,10 +105,10 @@ while (aux != 0)
         Console.WriteLine("El minimo numero es: " + num2);
     } else
     {
-        
+        Console.WriteLine("El maximo numero es: " + num2);
+        Console.WriteLine("El minimo numero es: " + num1);
     }
 
     Console.WriteLine("Ingrese 0 para temrinar o 1 para realizar otro calculo: ");
     int.TryParse(Console.ReadLine(), out aux);
 }
-
