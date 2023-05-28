@@ -1,52 +1,87 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Hello, World!");
+//Calculadora V1
 
-int a;
-int b;
+int aux = 1;
 
-a = 10;
-b = a;
-
-Console.WriteLine("valor de a: "+a);
-Console.WriteLine("valor de b: "+b);
-
-int x;
-bool control = int.TryParse(Console.ReadLine(), out x);
-
-//Console.WriteLine(control);
-
-int resto = 1;
-int aux, i = 0;
-double invertido = 0;
-
-if (control)
+while (aux != 0)
 {
-    if (x > 0)
+    Console.WriteLine("Calculadora");
+    Console.WriteLine("1 - Suma");
+    Console.WriteLine("2 - Resta");
+    Console.WriteLine("3 - Multiplicacion");
+    Console.WriteLine("4 - Division");
+    Console.WriteLine("5 - Otras operaciones");
+    Console.WriteLine("Ingrese la operacion que desea realizar: ");
+
+    int opcion; 
+
+    int.TryParse(Console.ReadLine(), out opcion);
+
+    //Console.Write(opcion);
+
+    int num1;
+    int num2;
+    int resultado = 0;
+
+    Console.WriteLine("ingrese el primer numero: ");
+    int.TryParse(Console.ReadLine(), out num1);
+
+    Console.WriteLine("Ingrese el segundo numero: ");
+    int.TryParse(Console.ReadLine(), out num2);
+
+    switch (opcion)
     {
-        aux = x;
-        while (aux > 0)
-        {
-            aux = aux / 10;
-            i++;
-        }
+        case 1:
+            resultado = num1 + num2;
+        break;
+        case 2:
+            resultado = num1 - num2;
+        break;
+        case 3:
+            //resultado = num1 * num2;
+            for (int i = 0; i < num1; i++)
+            {
+                resultado = resultado + num2;
+            }
+            resultado = num1 * num2;
+        break;
+        case 4:
+            if (num2 != 0)
+            {
+                resultado = num1 / num2;
+            } else
+            {
+                Console.WriteLine("Error");
+            }
+        break;
+        default:
+            int a;
+            Console.WriteLine("Elija uno de los numeros ingresados: ");
+            Console.WriteLine("1 - " + num1);
+            Console.WriteLine("2 - " + num2);
+            int.TryParse(Console.ReadLine(), out a);
+            if (a == 1)
+            {
+                Console.WriteLine("Valor Absoluto: " + Math.Abs(num1));
+                //Console.WriteLine(Math.Abs(num1));
+                Console.WriteLine("Cuadrado: ");
+                Console.WriteLine(Math.Pow(num1, 2));
+                Console.WriteLine("Raiz cuadrada: ");
+                Console.WriteLine(Math.Sqrt(num1));
+                Console.WriteLine("Seno: ");
+                Console.WriteLine(Math.Asin(num1));
+                Console.WriteLine("Coseno: ");
+                Console.WriteLine(Math.Acos(num1));
+                Console.WriteLine("Parte entera de float: ");
+            }
+            break;
+    }
 
-        while (x > 0)
-        {
-            resto = x % 10;
-            x = x / 10;  
-            invertido = invertido + (resto * (Math.Pow(10, i-1)));
-            i--;
-        }
+    Console.WriteLine("El resultado es: ");
+    Console.Write(resultado);
 
-        //invertido = invertido / 10;
-        Console.WriteLine(invertido);
-    } else
-    {
-        Console.WriteLine("no se acepta ese numero");  
-    } 
-
-} else
-{
-    Console.WriteLine("no es numero");
+    Console.WriteLine("Ingrese 0 para temrinar o 1 para realizar otro calculo: ");
+    int.TryParse(Console.ReadLine(), out aux);
 }
+
