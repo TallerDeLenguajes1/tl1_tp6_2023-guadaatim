@@ -20,15 +20,17 @@ while (aux != 0)
 
     //Console.Write(opcion);
 
-    int num1;
-    int num2;
-    int resultado = 0;
+    float num1;
+    float num2;
+    float resultado = 0;
 
     Console.WriteLine("ingrese el primer numero: ");
-    int.TryParse(Console.ReadLine(), out num1);
+    float.TryParse(Console.ReadLine(), out num1);
 
     Console.WriteLine("Ingrese el segundo numero: ");
-    int.TryParse(Console.ReadLine(), out num2);
+    float.TryParse(Console.ReadLine(), out num2);
+
+    Console.WriteLine(num1);
 
     switch (opcion)
     {
@@ -60,35 +62,41 @@ while (aux != 0)
             double numradian;
             
             Console.WriteLine("Elija uno de los numeros ingresados: ");
-            Console.WriteLine("1 - " + num1);
+            Console.WriteLine("1 - " +num1);
             Console.WriteLine("2 - " + num2);
             int.TryParse(Console.ReadLine(), out a);
             if (a == 1)
             {
                 Console.WriteLine("Valor Absoluto: " + Math.Abs(num1));
                 Console.WriteLine("Cuadrado: " + Math.Pow(num1, 2));
-                Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(num1));
+                if (num1 >= 0)
+                {
+                    Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(num1));
+
+                }
                 numradian = num1 * Math.PI / 180;
                 Console.WriteLine("Seno: " + Math.Asin(numradian));
                 Console.WriteLine("Coseno: " + Math.Acos(numradian));
-                Console.WriteLine("Parte entera de float: ");
+                Console.WriteLine("Parte entera de float: " + Math.Truncate(num1));
             } else
             {
                 Console.WriteLine("Valor Absoluto: " + Math.Abs(num2));
                 Console.WriteLine("Cuadrado: " + Math.Pow(num2, 2));
-                Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(num2));
+                if (num2 >= 0)
+                {
+                    Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(num2));
+                }
                 numradian = num2 * Math.PI / 180;
                 Console.WriteLine("Seno: " + Math.Asin(numradian));
                 Console.WriteLine("Coseno: " + Math.Acos(numradian));
-                Console.WriteLine("Parte entera de float: ");
+                Console.WriteLine("Parte entera de float: " + Math.Truncate(num2));
             }
             break;
     }
 
     if (opcion != 5)
     {
-        Console.WriteLine("El resultado es: ");
-        Console.Write(resultado);
+        Console.WriteLine("El resultado es: " + resultado);
     }
 
     Console.WriteLine("Ingrese 0 para temrinar o 1 para realizar otro calculo: ");
