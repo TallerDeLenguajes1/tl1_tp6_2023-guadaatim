@@ -29,8 +29,16 @@ Console.WriteLine(cadena.Substring(2, 1));
 //calculadora ???
 
 //recorrer cadena
-
 foreach (var car in cadena)
 {
     Console.WriteLine(car);
 }
+
+//buscar ocurrencia en cadena
+
+//convertir a mayuscula y minuscula
+Console.WriteLine("Cadena en mayusculas: " + cadena.ToUpper());
+Console.WriteLine("Cadena en minuscula: " + cadena.ToLower());
+
+//cadena separada por caracteres
+string cadenacar = string.Empty;
