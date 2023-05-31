@@ -24,5 +24,13 @@ cadenasconcatenadas = cadena + cadena2;
 Console.WriteLine("Cadenas concatenadas: " + cadenasconcatenadas);
 
 //extraer subcadena
-
 Console.WriteLine(cadena.Substring(2, 1));
+
+//calculadora ???
+
+//recorrer cadena
+
+foreach (var car in cadena)
+{
+    Console.WriteLine(car);
+}
