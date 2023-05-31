@@ -1,52 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Hello, World!");
+string cadena = String.Empty;
+string cadena2 = String.Empty;
 
-int a;
-int b;
+Console.WriteLine("Ingrese una palabra: ");
+cadena = Console.ReadLine(); //?
 
-a = 10;
-b = a;
+int longitudcad1 = cadena.Length;
 
-Console.WriteLine("valor de a: "+a);
-Console.WriteLine("valor de b: "+b);
+Console.WriteLine("Longitud de la cadena ingresada: " + longitudcad1);
 
-int x;
-bool control = int.TryParse(Console.ReadLine(), out x);
-
-//Console.WriteLine(control);
-
-int resto = 1;
-int aux, i = 0;
-double invertido = 0;
-
-if (control)
-{
-    if (x > 0)
-    {
-        aux = x;
-        while (aux > 0)
-        {
-            aux = aux / 10;
-            i++;
-        }
-
-        while (x > 0)
-        {
-            resto = x % 10;
-            x = x / 10;  
-            invertido = invertido + (resto * (Math.Pow(10, i-1)));
-            i--;
-        }
-
-        //invertido = invertido / 10;
-        Console.WriteLine(invertido);
-    } else
-    {
-        Console.WriteLine("no se acepta ese numero");  
-    } 
-
-} else
-{
-    Console.WriteLine("no es numero");
-}
+Console.WriteLine("Ingrese otra palabra: ");
