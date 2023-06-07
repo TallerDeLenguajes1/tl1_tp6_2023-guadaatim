@@ -45,7 +45,6 @@ foreach (var car in cadena)
 //buscar ocurrencia en cadena
 
 string palabrabuscada = String.Empty;
-int ocurrencias = 0;
 
 Console.WriteLine("Ingrese la palabra que desea buscar: ");
 palabrabuscada = Console.ReadLine();
@@ -53,10 +52,9 @@ palabrabuscada = Console.ReadLine();
 
 if (cadena.Contains(palabrabuscada))
 {
-    ocurrencias += 1;
+    Console.WriteLine("La palabra " + palabrabuscada + "se encuentra en la cadena ingresada");
 }
 
-Console.WriteLine("La palabra se encuentra" + ocurrencias + "veces");
 
 //convertir a mayuscula y minuscula
 Console.WriteLine("Cadena en mayusculas: " + cadena.ToUpper());
