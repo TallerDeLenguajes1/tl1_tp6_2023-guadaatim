@@ -24,7 +24,14 @@ cadenasconcatenadas = cadena + cadena2;
 Console.WriteLine("Cadenas concatenadas: " + cadenasconcatenadas);
 
 //extraer subcadena
-Console.WriteLine(cadena.Substring(2, 1));
+int caracter;
+int palabra;
+
+Console.WriteLine("Ingrese el caracter que desea extraer");
+int.TryParse(Console.ReadLine(), out caracter);
+Console.WriteLine("Ingrese la palabra de la que desea extrae el caracter: ");
+int.TryParse(Console.ReadLine(), out palabra);
+Console.WriteLine(cadena.Substring(caracter, palabra));
 
 //calculadora ???
 
