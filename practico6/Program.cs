@@ -31,6 +31,7 @@ Console.WriteLine("Ingrese el caracter que desea extraer");
 int.TryParse(Console.ReadLine(), out caracter);
 Console.WriteLine("Ingrese la palabra de la que desea extrae el caracter: ");
 int.TryParse(Console.ReadLine(), out palabra);
+
 Console.WriteLine(cadena.Substring(caracter, palabra));
 
 //calculadora ???
@@ -42,6 +43,20 @@ foreach (var car in cadena)
 }
 
 //buscar ocurrencia en cadena
+
+string palabrabuscada = String.Empty;
+int ocurrencias = 0;
+
+Console.WriteLine("Ingrese la palabra que desea buscar: ");
+palabrabuscada = Console.ReadLine();
+
+
+if (cadena.Contains(palabrabuscada))
+{
+    ocurrencias += 1;
+}
+
+Console.WriteLine("La palabra se encuentra" + ocurrencias + "veces");
 
 //convertir a mayuscula y minuscula
 Console.WriteLine("Cadena en mayusculas: " + cadena.ToUpper());
