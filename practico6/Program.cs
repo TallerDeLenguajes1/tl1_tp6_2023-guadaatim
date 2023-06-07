@@ -34,8 +34,6 @@ int.TryParse(Console.ReadLine(), out palabra);
 
 Console.WriteLine(cadena.Substring(caracter, palabra));
 
-//calculadora ???
-
 //recorrer cadena
 foreach (var car in cadena)
 {
@@ -49,7 +47,6 @@ string palabrabuscada = String.Empty;
 Console.WriteLine("Ingrese la palabra que desea buscar: ");
 palabrabuscada = Console.ReadLine();
 
-
 if (cadena.Contains(palabrabuscada))
 {
     Console.WriteLine("La palabra " + palabrabuscada + "se encuentra en la cadena ingresada");
@@ -62,3 +59,15 @@ Console.WriteLine("Cadena en minuscula: " + cadena.ToLower());
 
 //cadena separada por caracteres
 string cadenacar = string.Empty;
+
+Console.WriteLine("Ingrese una cadena: ");
+cadenacar = Console.ReadLine();
+
+string[] cadenaseparada = cadenacar.Split('-');
+
+foreach (var car in cadenaseparada)
+{
+    Console.WriteLine(car);
+}
+
+//calculadora ???
