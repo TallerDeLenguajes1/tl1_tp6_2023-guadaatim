@@ -71,25 +71,18 @@ foreach (var car in cadenaseparada)
 }
 
 //resolver string
-
 string expresionarit = String.Empty;
 int numero1;
 int numero2;
 int resultado2 = 0; 
-string operador;
 
-Console.WriteLine("Inggrese una operacion: ");
+Console.WriteLine("Ingrese una operacion: ");
 expresionarit = Console.ReadLine();
 
 string[] expresionseparada = expresionarit.Split('+', '-', '/', '*');
 
-
-    numero1 = Convert.ToInt32(expresionseparada[0]);
-    numero2 = Convert.ToInt32(expresionseparada[1]);
-
-    Console.WriteLine(numero1);
-    Console.WriteLine(numero2);
-
+numero1 = Convert.ToInt32(expresionseparada[0]);
+numero2 = Convert.ToInt32(expresionseparada[1]);
 
 if (expresionarit.Contains('+'))
 {
@@ -116,10 +109,11 @@ if (expresionarit.Contains('+'))
 
 Console.WriteLine("El resultado es: " + resultado2);
 
-//calculadora ???
-
-
+//calculadora
 int aux = 1;
+float num1 = 0;
+float num2 = 0;
+float resultado = 0;
 
 while (aux != 0)
 {
@@ -134,12 +128,6 @@ while (aux != 0)
     int opcion; 
 
     int.TryParse(Console.ReadLine(), out opcion);
-
-    //Console.Write(opcion);
-
-    float num1;
-    float num2;
-    float resultado = 0;
 
     Console.WriteLine("ingrese el primer numero: ");
     float.TryParse(Console.ReadLine(), out num1);
@@ -158,11 +146,6 @@ while (aux != 0)
             resultado = num1 - num2;
         break;
         case 3:
-            //resultado = num1 * num2;
-            for (int i = 0; i < num1; i++)
-            {
-                resultado = resultado + num2;
-            }
             resultado = num1 * num2;
         break;
         case 4:
@@ -229,3 +212,7 @@ while (aux != 0)
     Console.WriteLine("Ingrese 0 para temrinar o 1 para realizar otro calculo: ");
     int.TryParse(Console.ReadLine(), out aux);
 }
+
+string num1s = Convert.ToString(num1);
+string num2s = Convert.ToString(num2);
+Console.WriteLine("El resultado de " + num1s + " + " num2s + "es " + resultado);
