@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //primera cadena
-string cadena = String.Empty;
+string? cadena = String.Empty;
 
 Console.WriteLine("Ingrese una palabra: ");
 cadena = Console.ReadLine(); //?
@@ -221,4 +221,4 @@ while (aux != 0)
 
 string num1s = Convert.ToString(num1);
 string num2s = Convert.ToString(num2);
-Console.WriteLine("El resultado de " + num1s + " + " num2s + "es " + resultado);
+Console.WriteLine("El resultado de " + num1s + " + " + num2s + "es " + resultado);
