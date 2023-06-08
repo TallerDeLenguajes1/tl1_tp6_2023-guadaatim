@@ -1,0 +1,1 @@
+Usar @ o $ antes de una cadena de texto indica que la cadena se debe interpretar literalmente.
