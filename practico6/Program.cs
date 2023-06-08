@@ -70,4 +70,7 @@ foreach (var car in cadenaseparada)
     Console.WriteLine(car);
 }
 
+//resolver string
+
+
 //calculadora ???
