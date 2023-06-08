@@ -58,9 +58,9 @@ Console.WriteLine("Cadena en mayusculas: " + cadena.ToUpper());
 Console.WriteLine("Cadena en minuscula: " + cadena.ToLower());
 
 //cadena separada por caracteres
-string cadenacar = string.Empty;
+string cadenacar = String.Empty;
 
-Console.WriteLine("Ingrese una cadena: ");
+Console.WriteLine("Ingrese una cadena separada por - : ");
 cadenacar = Console.ReadLine();
 
 string[] cadenaseparada = cadenacar.Split('-');
@@ -72,5 +72,48 @@ foreach (var car in cadenaseparada)
 
 //resolver string
 
+string expresionarit = String.Empty;
+int numero1;
+int numero2;
+int resultado = 0; 
+string operador;
+
+Console.WriteLine("Inggrese una operacion: ");
+expresionarit = Console.ReadLine();
+
+string[] expresionseparada = expresionarit.Split('+', '-', '/', '*');
+
+
+    numero1 = Convert.ToInt32(expresionseparada[0]);
+    numero2 = Convert.ToInt32(expresionseparada[1]);
+
+    Console.WriteLine(numero1);
+    Console.WriteLine(numero2);
+
+
+if (expresionarit.Contains('+'))
+{
+    resultado = numero1 + numero2; 
+} else
+{
+    if (expresionarit.Contains('-'))
+    {
+        resultado = numero1 - numero2;
+    } else
+    {
+        if (expresionarit.Contains('*'))
+        {
+            resultado = numero1 * numero2;
+        } else
+        {
+            if (expresionarit.Contains('/') && numero2 != 0)
+            {
+                resultado = numero1 / numero2;   
+            }
+        }
+    }
+}
+
+Console.WriteLine("El resultado es: " + resultado);
 
 //calculadora ???
